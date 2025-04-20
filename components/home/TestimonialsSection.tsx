@@ -5,227 +5,237 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const [currentQuad, setCurrentQuad] = useState(0);
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
 
   const testimonials = [
     {
-      name: "Sophie Martin",
+      name: "Sophie M.",
       role: "Parent",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
-      content: "Un service qui a changé notre quotidien. Mon fils est beaucoup plus serein pendant ses trajets.",
+      content: "Service qui a changé notre quotidien. Mon fils est plus serein.",
     },
     {
-      name: "Thomas Dubois",
+      name: "Thomas D.",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
-      content: "Une expérience enrichissante qui donne du sens à mon travail.",
+      content: "Expérience enrichissante qui donne du sens à mon travail.",
     },
     {
-      name: "Marie Leroy",
+      name: "Marie L.",
       role: "Parent",
       image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
-      content: "L'accompagnement est parfaitement adapté aux besoins de ma fille.",
+      content: "Accompagnement parfaitement adapté aux besoins spéciaux.",
     },
     {
-      name: "Lucas Bernard",
+      name: "Lucas B.",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
-      content: "La formation reçue m'a permis de mieux comprendre les enfants neuro-atypiques.",
+      content: "Formation excellente pour comprendre les besoins spécifiques.",
     },
     {
-      name: "Emma Petit",
+      name: "Emma P.",
       role: "Parent",
       image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
-      content: "Une équipe à l'écoute et des chauffeurs bienveillants.",
+      content: "Équipe à l'écoute et chauffeurs bienveillants.",
+    },
+    {
+      name: "Jean D.",
+      role: "Parent",
+      image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
+      content: "Fiable et sécurisant pour mon enfant autiste.",
+    },
+    {
+      name: "Amélie L.",
+      role: "Chauffeur",
+      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+      content: "Formation complète et pro, accompagnement personnalisé.",
+    },
+    {
+      name: "Pierre G.",
+      role: "Parent",
+      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg",
+      content: "Solution idéale pour besoins spécifiques.",
+    },
+    {
+      name: "Nathalie R.",
+      role: "Chauffeur",
+      image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg",
+      content: "Travailler avec ces enfants est très enrichissant.",
+    },
+    {
+      name: "David M.",
+      role: "Parent",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+      content: "Conducteurs patients et à l'écoute.",
+    },
+    {
+      name: "Sarah K.",
+      role: "Parent",
+      image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg",
+      content: "Mon fils adore ses trajets maintenant.",
+    },
+    {
+      name: "Marc T.",
+      role: "Chauffeur",
+      image: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
+      content: "Approche professionnelle et humaine.",
     }
   ];
 
+  // Crée des groupes de 4 témoignages
+  const testimonialQuads = [];
+  for (let i = 0; i < testimonials.length; i++) {
+    testimonialQuads.push([
+      testimonials[i % testimonials.length],
+      testimonials[(i + 1) % testimonials.length],
+      testimonials[(i + 2) % testimonials.length],
+      testimonials[(i + 3) % testimonials.length]
+    ]);
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
+      setDirection('right');
+      setCurrentQuad((prev) => (prev + 1) % testimonialQuads.length);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [testimonialQuads.length]);
 
   const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+    enter: (direction: 'left' | 'right') => ({
+      x: direction === 'right' ? '30%' : '-30%',
       opacity: 0,
-      scale: 0.8,
     }),
     center: {
-      zIndex: 1,
       x: 0,
       opacity: 1,
-      scale: 1,
+      transition: { duration: 0.5 }
     },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+    exit: (direction: 'left' | 'right') => ({
+      x: direction === 'right' ? '-30%' : '30%',
       opacity: 0,
-      scale: 0.8,
+      transition: { duration: 0.5 }
     }),
   };
 
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
+  const nextQuad = () => {
+    setDirection('right');
+    setCurrentQuad((prev) => (prev + 1) % testimonialQuads.length);
   };
 
-  const paginate = (newDirection: number) => {
-    setDirection(newDirection);
-    setCurrentIndex((prevIndex) => (prevIndex + newDirection + testimonials.length) % testimonials.length);
+  const prevQuad = () => {
+    setDirection('left');
+    setCurrentQuad((prev) => (prev - 1 + testimonialQuads.length) % testimonialQuads.length);
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-white relative overflow-hidden">
-      <div className="container-custom relative z-10">
+    <section className="py-12 bg-gradient-to-b from-background to-white relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-heading mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Ils nous font <span className="text-primary">confiance</span>
           </h2>
-          <p className="text-lg text-text/80 max-w-2xl mx-auto">
-            Découvrez les témoignages de parents et chauffeurs qui partagent leur expérience avec Atypik Driver.
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            Découvrez les témoignages de parents et chauffeurs.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-24">
-          {/* Premier carrousel */}
-          <div className="relative h-[300px] overflow-hidden">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.div
-                key={currentIndex}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
-
-                  if (swipe < -swipeConfidenceThreshold) {
-                    paginate(1);
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    paginate(-1);
-                  }
-                }}
-                className="absolute w-full"
-              >
-                <TestimonialCard testimonial={testimonials[currentIndex]} />
-              </motion.div>
-            </AnimatePresence>
-
-            <div className="absolute inset-x-0 bottom-0 flex justify-center gap-2 mt-4">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setDirection(index > currentIndex ? 1 : -1);
-                    setCurrentIndex(index);
-                  }}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-primary' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          {[0, 1, 2, 3].map((index) => (
+            <div key={index} className="relative h-[180px]"> 
+              <AnimatePresence mode="popLayout" custom={direction}>
+                <motion.div
+                  key={`card-${currentQuad}-${index}`}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  className="absolute top-0 left-0 right-0 h-full"
+                >
+                  <TestimonialCard testimonial={testimonialQuads[currentQuad][index]} />
+                </motion.div>
+              </AnimatePresence>
             </div>
+          ))}
+        </div>
 
-            <button
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
-              onClick={() => paginate(-1)}
-            >
-              <ChevronLeft className="w-6 h-6 text-primary" />
-            </button>
-            <button
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
-              onClick={() => paginate(1)}
-            >
-              <ChevronRight className="w-6 h-6 text-primary" />
-            </button>
+        {/* Contrôles de navigation */}
+        <div className="flex justify-center mt-6 gap-4">
+          <button
+            onClick={prevQuad}
+            className="bg-white p-1.5 rounded-full shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <ChevronLeft className="w-4 h-4 text-primary" />
+          </button>
+          
+          <div className="flex items-center gap-1.5">
+            {testimonialQuads.slice(0, 6).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setDirection(index > currentQuad % 6 ? 'right' : 'left');
+                  setCurrentQuad(index * 2 % testimonialQuads.length);
+                }}
+                className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                  Math.floor(currentQuad / 2) % 3 === index % 3 ? 'bg-primary' : 'bg-gray-300'
+                }`}
+              />
+            ))}
           </div>
 
-          {/* Second carrousel */}
-          <div className="relative h-[300px] overflow-hidden">
-            <AnimatePresence initial={false} custom={-direction}>
-              <motion.div
-                key={(currentIndex + 2) % testimonials.length}
-                custom={-direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
-
-                  if (swipe < -swipeConfidenceThreshold) {
-                    paginate(1);
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    paginate(-1);
-                  }
-                }}
-                className="absolute w-full"
-              >
-                <TestimonialCard testimonial={testimonials[(currentIndex + 2) % testimonials.length]} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
+          <button
+            onClick={nextQuad}
+            className="bg-white p-1.5 rounded-full shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <ChevronRight className="w-4 h-4 text-primary" />
+          </button>
         </div>
       </div>
 
       {/* Background decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-primary/5 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/5 rounded-full blur-2xl animate-pulse" />
     </section>
   );
 }
 
 function TestimonialCard({ testimonial }: { testimonial: any }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg mx-4">
-      <div className="flex items-center gap-4 mb-4">
-        <div className="relative">
+    <div className="bg-white p-3 rounded-md shadow-xs h-full flex flex-col border border-gray-100 text-center">
+      <div className="flex flex-col items-center mb-2">
+        <div className="relative mb-1">
           <img
             src={testimonial.image}
             alt={testimonial.name}
-            className="w-14 h-14 rounded-full object-cover border-2 border-secondary"
+            className="w-8 h-8 rounded-full object-cover border border-secondary"
+            width={32}
+            height={32}
           />
-          <div className="absolute -bottom-1 -right-1 bg-primary rounded-full p-1">
-            <Heart className="w-3 h-3 text-white" />
+          <div className="absolute -bottom-0.5 -right-0.5 bg-primary rounded-full p-0.5">
+            <Heart className="w-1.5 h-1.5 text-white" />
           </div>
         </div>
         <div>
-          <h4 className="font-bold text-lg">{testimonial.name}</h4>
-          <p className="text-sm text-text/70">{testimonial.role}</p>
+          <h4 className="font-medium text-xs">{testimonial.name}</h4>
+          <p className="text-[0.6rem] text-gray-500">{testimonial.role}</p>
         </div>
       </div>
-      <p className="text-text/80 italic mb-4">&ldquo;{testimonial.content}&rdquo;</p>
-      <div className="flex gap-1">
+      <p className="text-gray-600 text-[0.65rem] italic mb-2 flex-grow leading-tight">
+        &ldquo;{testimonial.content}&rdquo;
+      </p>
+      <div className="flex justify-center gap-0.5">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+          <Star key={i} className="w-2 h-2 fill-yellow-400 text-yellow-400" />
         ))}
       </div>
     </div>
   );
-}
+} 

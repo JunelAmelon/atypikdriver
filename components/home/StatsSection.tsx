@@ -26,18 +26,18 @@ const stats = [
 
 export function StatsSection() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden"> {/* Changé de py-24 à py-16 */}
       <div className="container-custom relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-heading text-center mb-16"
+          className="text-3xl md:text-4xl font-heading text-center mb-12" /* Changé de mb-16 à mb-12 */
         >
           Notre <span className="text-primary">impact</span>
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> {/* Changé de gap-8 à gap-6 */}
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -48,22 +48,22 @@ export function StatsSection() {
               className="relative group"
             >
               <div className={`
-                relative z-10 bg-white rounded-2xl p-8 shadow-lg
+                relative z-10 bg-white rounded-2xl p-6 shadow-lg /* Changé de p-8 à p-6 */
                 transform transition-all duration-300
                 group-hover:-translate-y-2 group-hover:shadow-xl
               `}>
                 <div className={`
-                  w-16 h-16 mb-6 rounded-xl
+                  w-14 h-14 mb-4 rounded-xl /* Changé de w-16/h-16/mb-6 à w-14/h-14/mb-4 */
                   bg-gradient-to-br ${stat.color}
                   flex items-center justify-center
                   transform transition-transform group-hover:scale-110
                 `}>
                   {stat.icon}
                 </div>
-                <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> {/* Changé de text-4xl à text-3xl */}
                   {stat.number}
                 </h3>
-                <p className="text-lg text-text/70">{stat.label}</p>
+                <p className="text-md text-text/70">{stat.label}</p> {/* Changé de text-lg à text-md */}
               </div>
 
               {/* Floating decorative elements */}
@@ -80,7 +80,7 @@ export function StatsSection() {
                 }}
                 className="absolute -top-4 -right-4 text-secondary opacity-30"
               >
-                <Star className="w-8 h-8" />
+                <Star className="w-6 h-6" /> {/* Changé de w-8 h-8 à w-6 h-6 */}
               </motion.div>
               <motion.div
                 animate={{
@@ -95,7 +95,7 @@ export function StatsSection() {
                 }}
                 className="absolute -bottom-4 -left-4 text-primary opacity-30"
               >
-                <Cloud className="w-10 h-10" />
+                <Cloud className="w-8 h-8" /> {/* Changé de w-10 h-10 à w-8 h-8 */}
               </motion.div>
             </motion.div>
           ))}
