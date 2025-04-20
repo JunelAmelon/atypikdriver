@@ -37,13 +37,11 @@ export function DriverHeroSection() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/hero/driver-hero.jpg"
-                  alt="Chauffeur professionnel avec enfant"
-                  width={800}
-                  height={400}
+                <img
+                  src="https://img.freepik.com/free-photo/smiley-businesswoman-turning-around-car_23-2148766998.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
+                  alt="Enfant souriant en voiture"
                   className="w-full h-[350px] md:h-[400px] object-cover"
-                  priority
+            
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
@@ -51,7 +49,7 @@ export function DriverHeroSection() {
                       <blockquote className="text-base md:text-lg italic mb-2">
                         "Je me lève le matin avec envie. Je sais que je change des vies."
                       </blockquote>
-                      <p className="font-medium text-sm md:text-base">Damien, chauffeur depuis 1 an</p>
+                      <p className="font-medium text-sm md:text-base">Damienne, chauffeur depuis 1 an</p>
                     </div>
                   </div>
                 </div>

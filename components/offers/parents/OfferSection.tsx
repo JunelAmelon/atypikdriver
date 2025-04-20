@@ -84,7 +84,7 @@ export function OfferSection() {
             className="relative"
           >
             <img
-              src="/images/offers/parent-offer.jpg"
+              src="https://img.freepik.com/free-photo/went-shopping-today-shot-attractive-african-woman-sitting-car-salon_1157-46421.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
               alt="Transport adapté"
               className="rounded-2xl shadow-2xl w-full"
             />

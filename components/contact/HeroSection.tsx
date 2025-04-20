@@ -43,7 +43,7 @@ export function HeroSection() {
           >
             <div className="relative z-10 bg-white p-8 rounded-2xl shadow-xl">
               <img
-                src="/images/contact/contact-hero.jpg"
+                src="https://images.pexels.com/photos/3856027/pexels-photo-3856027.jpeg"
                 alt="Service client"
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
