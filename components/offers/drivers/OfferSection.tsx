@@ -81,7 +81,7 @@ export function OfferSection() {
             className="relative"
           >
             <img
-              src="/images/offers/driver-offer.jpg"
+              src="https://img.freepik.com/free-photo/full-shot-people-correcting-grammar-mistakes_23-2150171159.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
               alt="Chauffeur professionnel"
               className="rounded-2xl shadow-2xl w-full"
             />

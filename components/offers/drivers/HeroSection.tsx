@@ -9,7 +9,7 @@ export function DriverHeroSection() {
   return (
     <section className="min-h-[80vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
       {/* Conteneur avec padding top accru - Version très augmentée */}
-      <div className="pt-[120px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <div className="pt-[130px] md:pt-36 lg:pt-44 xl:pt-52 2xl:pt-60">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
@@ -37,11 +37,13 @@ export function DriverHeroSection() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src="https://img.freepik.com/free-photo/smiley-businesswoman-turning-around-car_23-2148766998.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
-                  alt="Enfant souriant en voiture"
+                <Image
+                  src="https://img.freepik.com/free-photo/smiley-businesswoman-turning-around-car_23-2148766998.jpg"
+                  alt="Chauffeur professionnel avec enfant"
+                  width={800}
+                  height={500}
                   className="w-full h-[350px] md:h-[400px] object-cover"
-            
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
@@ -60,8 +62,8 @@ export function DriverHeroSection() {
       </div>
 
       {/* Éléments décoratifs */}
-      <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-64 md:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-80 md:h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 md:w-[28rem] md:h-[28rem] bg-secondary/5 rounded-full blur-3xl animate-pulse" />
     </section>
   );
 }

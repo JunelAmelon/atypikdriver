@@ -8,8 +8,8 @@ import Image from 'next/image';
 export function ParentHeroSection() {
   return (
     <section className="min-h-[80vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
-      {/* Conteneur principal avec padding top accru - Version très augmentée */}
-      <div className="pt-[120px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      {/* Conteneur avec padding top accru - Version très augmentée */}
+      <div className="pt-[140px] md:pt-36 lg:pt-44 xl:pt-52 2xl:pt-60">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
@@ -48,7 +48,7 @@ export function ParentHeroSection() {
                   src="/images/hero/heroimgparent.png"
                   alt="Enfant souriant en voiture"
                   width={800}
-                  height={400}
+                  height={500}
                   className="w-full h-[350px] md:h-[400px] object-cover"
                   priority
                 />
@@ -69,8 +69,8 @@ export function ParentHeroSection() {
       </div>
 
       {/* Background decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-64 md:h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-80 md:h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 md:w-[28rem] md:h-[28rem] bg-secondary/5 rounded-full blur-3xl animate-pulse" />
     </section>
   );
 }
