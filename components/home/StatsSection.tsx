@@ -7,7 +7,7 @@ import Image from 'next/image';
 const stats = [
   {
     icon: <Users className="w-8 h-8 text-white" />,
-    number: "500+",
+    number: "150+",
     label: "Familles accompagnées",
     color: "from-primary/80 to-primary",
     bgImage: "/images/stats/famille.webp"
