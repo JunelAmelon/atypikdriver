@@ -85,7 +85,7 @@ export function DriversTab() {
         <div className="flex flex-col items-center mb-6">
           <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
             <img 
-              src="/images/services/driver-service.jpg" 
+              src="https://img.freepik.com/free-photo/indian-businessman-goes-home-dinner_496169-2783.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&semt=ais_hybrid&w=740" 
               alt="Sophie, chauffeur Atypik Driver" 
               className="w-full h-full object-cover"
             />
