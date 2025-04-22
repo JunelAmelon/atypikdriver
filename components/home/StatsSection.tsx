@@ -10,21 +10,21 @@ const stats = [
     number: "500+",
     label: "Familles accompagnées",
     color: "from-primary/80 to-primary",
-    bgImage: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+    bgImage: "/images/stats/famille.webp"
   },
   {
     icon: <Heart className="w-8 h-8 text-white" />,
     number: "98%",
     label: "Taux de satisfaction",
     color: "from-secondary/80 to-secondary",
-    bgImage: "https://img.freepik.com/free-photo/relaxed-happy-afro-america-woman-dances-has-fun-raises-hands-uo-carefree-enjoys-music_273609-51976.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&semt=ais_hybrid&w=740"
+    bgImage: "/images/stats/satisfaction.jpg"
   },
   {
     icon: <BarChart3 className="w-8 h-8 text-white" />,
     number: "120€",
     label: "Prix mensuel moyen",
     color: "from-primary/70 to-secondary/70",
-    bgImage: "https://img.freepik.com/free-vector/special-price-poster_1176-259.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&semt=ais_hybrid&w=740"
+    bgImage: "/images/stats/price.jpg"
   }
 ];
 

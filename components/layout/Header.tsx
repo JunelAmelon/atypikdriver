@@ -86,6 +86,11 @@ export function Header() {
                   )}
                 </div>
               ))}
+              
+              {/* Bouton de connexion */}
+              <Link href="#" className="bg-gradient-to-r from-primary to-secondary text-white font-medium py-2 px-6 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <span>Connexion</span>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -146,6 +151,17 @@ export function Header() {
                   )}
                 </div>
               ))}
+              
+              {/* Bouton de connexion mobile */}
+              <div className="px-6 py-3 mt-2">
+                <Link 
+                  href="#" 
+                  className="block bg-gradient-to-r from-primary to-secondary text-white font-medium py-3 px-6 rounded-lg text-center hover:shadow-md transition-all duration-300"
+                  onClick={toggleMenu}
+                >
+                  Connexion
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

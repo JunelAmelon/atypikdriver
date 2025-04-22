@@ -21,7 +21,7 @@ export function DriverHeroSection() {
                 Et si chaque trajet avait un <span className="text-primary">impact</span> ?
               </h1>
               <p className="text-lg text-text/80 mb-8">
-                Rejoignez une communauté de chauffeurs engagés, formés et valorisés. 
+                Rejoignez une communauté de chauffeurs engagés, formés et valorisés.<br></br> 
                 Donnez du sens à votre métier en accompagnant des enfants neuro-atypiques.
               </p>
               <Button href="#postuler" variant="primary" className="group">

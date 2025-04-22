@@ -40,7 +40,9 @@ export function StorySection() {
             Mon <span className="text-primary">histoire</span>
           </h2>
           <p className="text-lg text-text/80 text-center mb-8">
-            Maman de deux garçons, mon parcours m'a menée à créer Atypik Driver pour aider d'autres parents dans leur quotidien.
+          Je suis Khouzaimata SAID, maman de deux enfants, dont l’aîné est diagnostiqué TDAH sans hyperactivité. Mon parcours personnel, marqué par les défis de la parentalité et la conciliation entre vie professionnelle et rendez-vous médicaux, m’a conduite à créer Atypik Driver. 
+          <br></br>
+          Cette entreprise innovante apporte un soutien concret aux parents d’enfants à besoins spécifiques, en proposant un service d'accompagnement adapté et humain. Inspirée par mon vécu, je mets l’empathie, la flexibilité et la solidarité au cœur de mon engagement entrepreneurial.
           </p>
         </motion.div>
 

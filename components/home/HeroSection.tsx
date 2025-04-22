@@ -41,7 +41,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Votre enfant mérite plus qu'un simple trajet. Découvrez notre service de transport adapté aux besoins spécifiques des enfants neuro-atypiques.
+                Votre enfant mérite plus qu'un simple trajet. <br></br>Découvrez notre service de transport adapté aux besoins spécifiques des enfants neuro-atypiques.
               </motion.p>
               
               <motion.div

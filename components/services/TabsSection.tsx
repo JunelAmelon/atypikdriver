@@ -14,9 +14,9 @@ export function TabsSection() {
   const [activeTab, setActiveTab] = useState('parents');
 
   return (
-    <section className="py-16">
+    <section className="pt-52 pb-16 md:pt-48 lg:pt-56 xl:pt-64">
       <div className="container-custom">
-        <h1 className="text-4xl font-heading text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-heading text-center mb-12">
           Nos <span className="text-primary">services</span>
         </h1>
         

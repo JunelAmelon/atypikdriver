@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 interface ButtonProps {
   href?: string;
-  variant?: 'primary' | 'secondary' | 'gradient';
+  variant?: 'primary' | 'secondary' | 'gradient' | 'outline';
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -23,7 +23,8 @@ export function Button({
   const variants = {
     primary: 'bg-primary hover:bg-secondary text-white hover:text-text py-3 px-6',
     secondary: 'bg-secondary hover:bg-primary text-text hover:text-white py-3 px-6',
-    gradient: 'bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white py-3 px-6'
+    gradient: 'bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white py-3 px-6',
+    outline: 'bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-6'
   };
 
   const styles = cn(baseStyles, variants[variant], className);
