@@ -42,7 +42,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-secondary" />
-                <span>01 23 45 67 89</span>
+                <span>+33 6 11 55 30 51</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-secondary" />
@@ -50,7 +50,8 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-secondary mt-1" />
-                <span>123 Avenue des Accompagnateurs<br />75000 Paris</span>
+                <span>6 CHEMIN DE LA BUTTE AU BEURRE
+                <br />78350 JOUY EN JOSAS</span>
               </li>
             </ul>
           </div>

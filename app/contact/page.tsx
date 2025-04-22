@@ -29,7 +29,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Téléphone</h3>
-                      <p>01 23 45 67 89</p>
+                      <p>+33 6 11 55 30 51</p>
                       <p className="text-sm text-text/70">Du lundi au vendredi, 9h-18h</p>
                     </div>
                   </div>
@@ -51,14 +51,15 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Adresse</h3>
-                      <p>123 Avenue des Accompagnateurs</p>
-                      <p>75000 Paris</p>
+                      <p>6 CHEMIN DE LA BUTTE AU BEURRE</p>
+                      <p>78350 JOUY EN JOSAS</p>
                       <p className="text-sm text-text/70">Sur rendez-vous uniquement</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+                  <p className="text-sm text-text/70 mb-3">N° SIRET 90924699300028</p>
                   <h3 className="font-heading text-xl mb-2">
                     <span className="text-primary">Question</span> fréquente
                   </h3>
