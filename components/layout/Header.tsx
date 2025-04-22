@@ -32,7 +32,7 @@ export function Header() {
   return (
 <header className="absolute top-0 left-0 right-0 z-50 pb-10 md:pb-10">
       <div className="container-custom py-6">
-        <nav className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-4 py-1">
+        <nav className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-4 py-3">
           <div className="flex items-center justify-between">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -43,7 +43,7 @@ export function Header() {
   <img 
     src="images/logos/logo-atypik.png" 
                 alt="AtypikDriver Logo"
-    className="h-full w-auto max-w-[80px]" // ajustez les classes Tailwind selon vos besoins
+    className="h-full w-auto max-w-[120px]" // Taille du logo augmentée de 80px à 120px
               />
             </Link>
             </motion.div>

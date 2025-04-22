@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section className="min-h-[60vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
       {/* Conteneur avec padding top accru */}
-      <div className="pt-[135px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <div className="pt-[180px] md:pt-40 lg:pt-48 xl:pt-56 2xl:pt-64">
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div

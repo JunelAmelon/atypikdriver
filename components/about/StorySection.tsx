@@ -28,13 +28,13 @@ export function StorySection() {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="pt-4 pb-24 bg-white relative overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-16"
+          className="max-w-3xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-heading text-center mb-6">
             Mon <span className="text-primary">histoire</span>

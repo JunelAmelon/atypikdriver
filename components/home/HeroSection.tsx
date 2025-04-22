@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] bg-gradient-to-b from-background to-white pb-24 overflow-hidden">
       {/* Conteneur avec padding top très accru sur mobile */}
-      <div className="pt-[170px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56"> {/* Modifié ici */}
+      <div className="pt-[200px] md:pt-40 lg:pt-48 xl:pt-56 2xl:pt-64"> {/* Augmenté pour compenser la taille du header */}
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative z-20">

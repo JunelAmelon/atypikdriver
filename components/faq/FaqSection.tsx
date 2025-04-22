@@ -67,7 +67,7 @@ export function FaqSection() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-4 pb-16 bg-white">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {faqs.map((category, categoryIndex) => (

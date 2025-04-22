@@ -83,25 +83,24 @@ export function TestimonialsSection() {
     }
   ];
 
-  // Crée des groupes de 4 témoignages
-  const testimonialQuads = [];
+  // Crée des groupes de 3 témoignages
+  const testimonialTriples = [];
   for (let i = 0; i < testimonials.length; i++) {
-    testimonialQuads.push([
+    testimonialTriples.push([
       testimonials[i % testimonials.length],
       testimonials[(i + 1) % testimonials.length],
-      testimonials[(i + 2) % testimonials.length],
-      testimonials[(i + 3) % testimonials.length]
+      testimonials[(i + 2) % testimonials.length]
     ]);
   }
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDirection('right');
-      setCurrentQuad((prev) => (prev + 1) % testimonialQuads.length);
+      setCurrentQuad((prev) => (prev + 1) % testimonialTriples.length);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [testimonialQuads.length]);
+  }, [testimonialTriples.length]);
 
   const slideVariants = {
     enter: (direction: 'left' | 'right') => ({
@@ -122,16 +121,16 @@ export function TestimonialsSection() {
 
   const nextQuad = () => {
     setDirection('right');
-    setCurrentQuad((prev) => (prev + 1) % testimonialQuads.length);
+    setCurrentQuad((prev) => (prev + 1) % testimonialTriples.length);
   };
 
   const prevQuad = () => {
     setDirection('left');
-    setCurrentQuad((prev) => (prev - 1 + testimonialQuads.length) % testimonialQuads.length);
+    setCurrentQuad((prev) => (prev - 1 + testimonialTriples.length) % testimonialTriples.length);
   };
 
   return (
-    <section className="py-12 bg-gradient-to-b from-background to-white relative overflow-hidden">
+    <section className="pt-6 pb-12 bg-gradient-to-b from-background to-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -147,9 +146,9 @@ export function TestimonialsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          {[0, 1, 2, 3].map((index) => (
-            <div key={index} className="relative h-[180px]"> 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[0, 1, 2].map((index) => (
+            <div key={index} className="relative h-[250px]"> 
               <AnimatePresence mode="popLayout" custom={direction}>
                 <motion.div
                   key={`card-${currentQuad}-${index}`}
@@ -160,7 +159,7 @@ export function TestimonialsSection() {
                   exit="exit"
                   className="absolute top-0 left-0 right-0 h-full"
                 >
-                  <TestimonialCard testimonial={testimonialQuads[currentQuad][index]} />
+                  <TestimonialCard testimonial={testimonialTriples[currentQuad][index]} />
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -177,15 +176,15 @@ export function TestimonialsSection() {
           </button>
           
           <div className="flex items-center gap-1.5">
-            {testimonialQuads.slice(0, 6).map((_, index) => (
+            {testimonialTriples.slice(0, 5).map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  setDirection(index > currentQuad % 6 ? 'right' : 'left');
-                  setCurrentQuad(index * 2 % testimonialQuads.length);
+                  setDirection(index > currentQuad % 5 ? 'right' : 'left');
+                  setCurrentQuad(index % testimonialTriples.length);
                 }}
-                className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                  Math.floor(currentQuad / 2) % 3 === index % 3 ? 'bg-primary' : 'bg-gray-300'
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  currentQuad % 5 === index ? 'bg-primary' : 'bg-gray-300'
                 }`}
               />
             ))}
@@ -209,31 +208,31 @@ export function TestimonialsSection() {
 
 function TestimonialCard({ testimonial }: { testimonial: any }) {
   return (
-    <div className="bg-white p-3 rounded-md shadow-xs h-full flex flex-col border border-gray-100 text-center">
-      <div className="flex flex-col items-center mb-2">
-        <div className="relative mb-1">
+    <div className="bg-white p-5 rounded-lg shadow-md h-full flex flex-col border border-gray-200 text-center hover:shadow-lg transition-shadow">
+      <div className="flex flex-col items-center mb-4">
+        <div className="relative mb-3">
           <img
             src={testimonial.image}
             alt={testimonial.name}
-            className="w-8 h-8 rounded-full object-cover border border-secondary"
-            width={32}
-            height={32}
+            className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+            width={64}
+            height={64}
           />
-          <div className="absolute -bottom-0.5 -right-0.5 bg-primary rounded-full p-0.5">
-            <Heart className="w-1.5 h-1.5 text-white" />
+          <div className="absolute -bottom-1 -right-1 bg-primary rounded-full p-1">
+            <Heart className="w-3 h-3 text-white" />
           </div>
         </div>
         <div>
-          <h4 className="font-medium text-xs">{testimonial.name}</h4>
-          <p className="text-[0.6rem] text-gray-500">{testimonial.role}</p>
+          <h4 className="font-semibold text-base">{testimonial.name}</h4>
+          <p className="text-sm text-gray-500">{testimonial.role}</p>
         </div>
       </div>
-      <p className="text-gray-600 text-[0.65rem] italic mb-2 flex-grow leading-tight">
+      <p className="text-gray-700 text-base italic mb-4 flex-grow leading-relaxed">
         &ldquo;{testimonial.content}&rdquo;
       </p>
-      <div className="flex justify-center gap-0.5">
+      <div className="flex justify-center gap-1">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-2 h-2 fill-yellow-400 text-yellow-400" />
+          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
         ))}
       </div>
     </div>

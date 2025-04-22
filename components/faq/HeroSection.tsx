@@ -5,9 +5,9 @@ import { Search } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="min-h-[60vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
+    <section className="min-h-[40vh] bg-gradient-to-b from-background to-white pb-8 relative overflow-hidden">
       {/* Conteneur avec padding top accru */}
-      <div className="pt-[130px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <div className="pt-[180px] md:pt-40 lg:pt-48 xl:pt-56 2xl:pt-64">
         <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

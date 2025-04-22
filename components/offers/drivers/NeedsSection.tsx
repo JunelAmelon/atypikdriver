@@ -6,15 +6,15 @@ import { DollarSign, Heart, Brain } from 'lucide-react';
 export function NeedsSection() {
   const needs = [
     {
-      icon: <DollarSign className="w-6 h-6" />,
+      icon: <DollarSign className="w-6 h-6 text-secondary" />,
       text: "Un revenu stable sans course après les clients ?",
     },
     {
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Heart className="w-6 h-6 text-secondary" />,
       text: "Vous sentir utile au quotidien ?",
     },
     {
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6 text-secondary" />,
       text: "Être formé pour des missions exigeantes mais gratifiantes ?",
     },
   ];

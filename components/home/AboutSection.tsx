@@ -24,7 +24,7 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-white to-background relative overflow-hidden">
+    <section id="about" className="pt-8 pb-24 bg-gradient-to-b from-white to-background relative overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -43,7 +43,7 @@ export function AboutSection() {
                 className="mb-8"
               >
                 <img
-                  src="https://img.freepik.com/free-photo/nomad-family-traveling-living-van_23-2149651477.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
+                  src="/images/about-img.png"
                   alt="Enfants heureux"
                   className="rounded-2xl shadow-xl"
                 />

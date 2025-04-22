@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section className="min-h-[60vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
       {/* Conteneur avec padding top accru */}
-      <div className="pt-[140px] md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <div className="pt-[180px] md:pt-40 lg:pt-48 xl:pt-56 2xl:pt-64">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -46,7 +46,7 @@ export function HeroSection() {
             >
               <div className="relative z-10 bg-white p-8 rounded-2xl shadow-xl">
                 <Image
-                  src="https://images.pexels.com/photos/3856027/pexels-photo-3856027.jpeg"
+                  src="https://img.freepik.com/free-photo/close-up-person-working-call-center_23-2149288228.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&semt=ais_hybrid&w=740"
                   alt="Service client"
                   width={600}
                   height={400}

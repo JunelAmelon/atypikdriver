@@ -7,17 +7,17 @@ import { Button } from '@/components/ui/shared/Button';
 export function OfferSection() {
   const features = [
     {
-      icon: <Calendar className="w-8 h-8" />,
+      icon: <Calendar className="w-8 h-8 text-primary" />,
       title: "Missions planifiées à l'avance",
       description: "Plus de stress : vos trajets sont réservés 1 mois à l'avance",
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8 text-primary" />,
       title: "Formation AtypikCare™ incluse",
       description: "Certification valorisable sur votre CV",
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
+      icon: <DollarSign className="w-8 h-8 text-primary" />,
       title: "Revenus garantis",
       description: "2 500€/mois minimum pour 5 familles accompagnées",
     },
@@ -50,7 +50,7 @@ export function OfferSection() {
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-primary">{feature.title}</h3>
                     <p className="text-text/80">{feature.description}</p>
                   </div>
                 </motion.div>
@@ -81,7 +81,7 @@ export function OfferSection() {
             className="relative"
           >
             <img
-              src="https://img.freepik.com/free-photo/full-shot-people-correcting-grammar-mistakes_23-2150171159.jpg?uid=R143971211&ga=GA1.1.1911634789.1729294558&w=740"
+              src="/images/formation-chauffeurs.png"
               alt="Chauffeur professionnel"
               className="rounded-2xl shadow-2xl w-full"
             />

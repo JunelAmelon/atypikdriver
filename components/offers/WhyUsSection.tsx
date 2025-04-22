@@ -27,6 +27,8 @@ export function WhyUsSection() {
     "Centre Hospitalier Universitaire",
     "Association Française des Aidants",
     "Fédération des Parents d'Élèves",
+    "Zero investissement",
+    "Aximotravo",
   ];
 
   return (
@@ -69,7 +71,7 @@ export function WhyUsSection() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h3 className="text-xl font-bold mb-4">Ils nous font confiance</h3>
+            <h3 className="text-xl font-bold mb-4">Ils nous font <span className="text-yellow-500">confiance</span></h3>
             <div className="flex flex-wrap justify-center gap-6">
               {partners.map((partner, index) => (
                 <div

@@ -9,7 +9,7 @@ export function DriverHeroSection() {
   return (
     <section className="min-h-[80vh] bg-gradient-to-b from-background to-white pb-16 relative overflow-hidden">
       {/* Conteneur avec padding top accru - Version très augmentée */}
-      <div className="pt-[130px] md:pt-36 lg:pt-44 xl:pt-52 2xl:pt-60">
+      <div className="pt-[180px] md:pt-44 lg:pt-52 xl:pt-60 2xl:pt-68">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div

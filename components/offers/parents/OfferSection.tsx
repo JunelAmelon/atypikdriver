@@ -7,17 +7,17 @@ import { Button } from '@/components/ui/shared/Button';
 export function OfferSection() {
   const features = [
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8 text-primary" />,
       title: "Chauffeurs certifiés",
       description: "20h de formation sur les troubles neuro-atypiques (TSA, TDAH, Dys…)",
     },
     {
-      icon: <UserCheck className="w-8 h-8" />,
+      icon: <UserCheck className="w-8 h-8 text-primary" />,
       title: "Profil personnalisé",
       description: "Photo, besoins sensoriels, rituels rassurants… partagés avec le chauffeur",
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8 text-primary" />,
       title: "Abonnement solidaire",
       description: "120€/mois seulement grâce à la mutualisation entre familles",
     },
@@ -50,7 +50,7 @@ export function OfferSection() {
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-primary">{feature.title}</h3>
                     <p className="text-text/80">{feature.description}</p>
                   </div>
                 </motion.div>

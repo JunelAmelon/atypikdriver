@@ -22,7 +22,7 @@ export default function ContactPage() {
                   Nos <span className="text-primary">coordonnées</span>
                 </h2>
                 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-4 mb-4">
                   <div className="flex items-start gap-4">
                     <div className="bg-secondary/20 p-3 rounded-full text-primary flex-shrink-0">
                       <Phone size={24} />
@@ -57,21 +57,21 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-heading text-xl mb-4">
-                  <span className="text-primary">Question</span> fréquente
-                </h3>
-                <h4 className="font-bold mb-2">Comment fonctionne le service?</h4>
-                <p className="mb-4 text-text/80">
-                  Après inscription, nous analysons vos besoins de transport, identifions 
-                  un chauffeur adapté, et établissons un planning régulier. Notre application 
-                  vous permet de suivre les trajets en temps réel et de communiquer avec le chauffeur.
-                </p>
-                <a href="/faq" className="text-primary hover:text-secondary font-medium transition-colors">
-                  Voir toutes les questions fréquentes →
-                </a>
+                
+                <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+                  <h3 className="font-heading text-xl mb-2">
+                    <span className="text-primary">Question</span> fréquente
+                  </h3>
+                  <h4 className="font-bold mb-2">Comment fonctionne le service?</h4>
+                  <p className="mb-4 text-text/80">
+                    Après inscription, nous analysons vos besoins de transport, identifions 
+                    un chauffeur adapté, et établissons un planning régulier. Notre application 
+                    vous permet de suivre les trajets en temps réel et de communiquer avec le chauffeur.
+                  </p>
+                  <a href="/faq" className="text-primary hover:text-secondary font-medium transition-colors">
+                    Voir toutes les questions fréquentes →
+                  </a>
+                </div>
               </div>
             </div>
           </div>

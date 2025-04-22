@@ -6,19 +6,19 @@ import { AlertTriangle, Clock, DollarSign, Heart } from 'lucide-react';
 export function ProblemSection() {
   const problems = [
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
+      icon: <AlertTriangle className="w-6 h-6 text-primary" />,
       text: "Peur que votre enfant fasse une crise en route ?",
     },
     {
-      icon: <Clock className="w-6 h-6" />,
+      icon: <Clock className="w-6 h-6 text-primary" />,
       text: "Épuisement à tout gérer seul ?",
     },
     {
-      icon: <DollarSign className="w-6 h-6" />,
+      icon: <DollarSign className="w-6 h-6 text-primary" />,
       text: "Coûts qui s'accumulent ?",
     },
     {
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Heart className="w-6 h-6 text-primary" />,
       text: "Vous en avez assez des trajets chaotiques ?",
     },
   ];
