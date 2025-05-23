@@ -19,7 +19,7 @@ export function OfferSection() {
     {
       icon: <DollarSign className="w-8 h-8 text-primary" />,
       title: "Revenus garantis",
-      description: "2 500€/mois minimum pour 5 familles accompagnées",
+      description: "1 100€/mois minimum pour 5 familles accompagnées",
     },
   ];
 
