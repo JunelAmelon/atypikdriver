@@ -64,7 +64,7 @@ export function OfferSection() {
                   Occasionnel
                 </div>
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold text-primary">120€</span>
+                  <span className="text-4xl font-bold text-primary">149€</span>
                   <span className="text-text/70">/mois</span>
                 </div>
                 <p className="text-sm text-text/70">Idéal pour les besoins ponctuels</p>
@@ -79,7 +79,7 @@ export function OfferSection() {
                   Régulier
                 </div>
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold text-primary">180€</span>
+                  <span className="text-4xl font-bold text-primary">189€</span>
                   <span className="text-text/70">/mois</span>
                 </div>
                 <p className="text-sm text-text/70">Sans engagement - Annulation à tout moment</p>

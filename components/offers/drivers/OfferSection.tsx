@@ -59,7 +59,7 @@ export function OfferSection() {
 
             <div className="bg-white p-6 rounded-xl shadow-lg mb-8">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-4xl font-bold text-primary">1 500€</span>
+                <span className="text-4xl font-bold text-primary">1 100€</span>
                 <span className="text-text/70">/mois minimum</span>
               </div>
               <p className="text-sm text-text/70">Pour 5 familles accompagnées régulièrement</p>

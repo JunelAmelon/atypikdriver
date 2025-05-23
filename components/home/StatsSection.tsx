@@ -21,7 +21,7 @@ const stats = [
   },
   {
     icon: <BarChart3 className="w-8 h-8 text-white" />,
-    number: "120€",
+    number: "149€",
     label: "Prix mensuel moyen",
     color: "from-primary/70 to-secondary/70",
     bgImage: "/images/stats/price.jpg"
