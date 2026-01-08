@@ -10,25 +10,25 @@ export function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Sophie M.",
+      name: "Marie JOHNSON",
       role: "Parent",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
       content: "Service qui a changé notre quotidien. Mon fils est plus serein.",
     },
     {
-      name: "Thomas D.",
+      name: "Thomas DUTTOUR.",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
       content: "Expérience enrichissante qui donne du sens à mon travail.",
     },
     {
-      name: "Marie L.",
+      name: "Marie LANIRA",
       role: "Parent",
       image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
       content: "Accompagnement parfaitement adapté aux besoins spéciaux.",
     },
     {
-      name: "Lucas B.",
+      name: "Lucas",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
       content: "Formation excellente pour comprendre les besoins spécifiques.",
@@ -52,31 +52,31 @@ export function TestimonialsSection() {
       content: "Formation complète et pro, accompagnement personnalisé.",
     },
     {
-      name: "Pierre G.",
+      name: "Pierre GODSON",
       role: "Parent",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg",
       content: "Solution idéale pour besoins spécifiques.",
     },
     {
-      name: "Nathalie R.",
+      name: "Nathalie",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg",
       content: "Travailler avec ces enfants est très enrichissant.",
     },
     {
-      name: "David M.",
+      name: "David",
       role: "Parent",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
       content: "Conducteurs patients et à l'écoute.",
     },
     {
-      name: "Sarah K.",
+      name: "Sarah",
       role: "Parent",
       image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg",
       content: "Mon fils adore ses trajets maintenant.",
     },
     {
-      name: "Marc T.",
+      name: "Marc ",
       role: "Chauffeur",
       image: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
       content: "Approche professionnelle et humaine.",

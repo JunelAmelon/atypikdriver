@@ -27,11 +27,11 @@ export function ParentHeroSection() {
                 et une communauté solidaire pour alléger les coûts.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button href="#contact" variant="primary" className="group">
+                <Button href="/contact" variant="primary" className="group">
                   Je veux un trajet serein
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button href="tel:0123456789" variant="secondary">
+                <Button href="tel:+33 6 11 55 30 51" variant="secondary">
                   Parler à un conseiller
                 </Button>
               </div>

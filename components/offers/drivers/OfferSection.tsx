@@ -66,7 +66,7 @@ export function OfferSection() {
             </div>
 
             <div className="flex justify-center lg:justify-start">
-              <Button href="#postuler" variant="primary" className="group">
+              <Button href="/contact" variant="primary" className="group">
                 Postuler maintenant
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>

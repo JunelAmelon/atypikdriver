@@ -16,7 +16,7 @@ export function FaqSection() {
           answer: "Après inscription, nous analysons vos besoins de transport, identifions un chauffeur adapté, et établissons un planning régulier. Notre application vous permet de suivre les trajets en temps réel et de communiquer avec le chauffeur."
         },
         {
-          question: "Quelles sont les zones desservies ?",
+          question: "Quelles sont les zones de servies ?",
           answer: "Nous opérons actuellement dans toute l'Île-de-France. Une expansion vers d'autres régions est prévue prochainement."
         },
         {
@@ -29,11 +29,11 @@ export function FaqSection() {
       category: "Les Chauffeurs",
       questions: [
         {
-          question: "Comment sont sélectionnés les chauffeurs ?",
+          question: "Comment on selectionne nos drivers ?",
           answer: "Nos chauffeurs passent par un processus de sélection rigoureux incluant vérification des antécédents, formation spécialisée de 20h, et évaluation continue."
         },
         {
-          question: "Quelle formation reçoivent les chauffeurs ?",
+          question: "Vos chauffeurs ont quelles formations ?",
           answer: "La formation AtypikCare™ couvre la compréhension des troubles neuro-développementaux, la gestion des crises, les techniques de communication adaptée, et les premiers secours."
         }
       ]
@@ -46,7 +46,7 @@ export function FaqSection() {
           answer: "Le forfait mensuel de 120€ couvre les trajets réguliers. Les tarifs sont mutualisés entre les familles pour rester accessibles."
         },
         {
-          question: "Peut-on annuler ou modifier une réservation ?",
+          question: "Peut-on modifier une réservation ?",
           answer: "Oui, les modifications sont possibles jusqu'à 24h avant le trajet, sans frais supplémentaires."
         }
       ]
@@ -59,7 +59,7 @@ export function FaqSection() {
           answer: "Notre application permet de suivre le trajet en temps réel, de recevoir des notifications de départ/arrivée, et de communiquer avec le chauffeur."
         },
         {
-          question: "Quelles mesures de sécurité sont en place ?",
+          question: "Quelles sont vos mesures de sécurité ?",
           answer: "Nous avons mis en place un système de géolocalisation en temps réel, des véhicules adaptés et sécurisés, et un protocole strict de prise en charge."
         }
       ]

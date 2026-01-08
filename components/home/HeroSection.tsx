@@ -109,7 +109,7 @@ export function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <a 
-                  href="/services" 
+                  href="/offres/parents" 
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-primary to-secondary p-[2px] font-bold text-white transition-all hover:shadow-xl hover:shadow-primary/30"
                 >
                   <span className="relative flex h-14 items-center gap-2 rounded-full bg-white px-8 text-lg transition-all group-hover:bg-transparent">

@@ -8,7 +8,13 @@ import { Providers } from '@/components/Providers';
 export const metadata: Metadata = {
   title: 'Atypik Driver | Transport bienveillant pour enfants neuro-atypiques',
   description: 'Atypik Driver est une plateforme de transport collaborative dédiée aux enfants neuro-atypiques, offrant sécurité, bienveillance et adaptation.',
+  icons: {
+    icon: '/images/logos/logo-atypik.png',
+    shortcut: '/images/logos/logo-atypik.png',
+    apple: '/images/logos/logo-atypik.png',
+  },
 };
+
 
 export default function RootLayout({
   children,

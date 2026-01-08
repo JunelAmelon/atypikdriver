@@ -24,7 +24,7 @@ export function DriverHeroSection() {
                 Rejoignez une communauté de chauffeurs engagés, formés et valorisés.<br></br> 
                 Donnez du sens à votre métier en accompagnant des enfants neuro-atypiques.
               </p>
-              <Button href="#postuler" variant="primary" className="group">
+              <Button href="/contact" variant="primary" className="group">
                 Postuler maintenant
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>

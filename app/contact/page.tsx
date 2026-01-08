@@ -40,7 +40,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Email</h3>
-                      <p>contact@atypikdriver.fr</p>
+                      <p>contact@atypik-driver.com</p>
                       <p className="text-sm text-text/70">Réponse sous 24h ouvrées</p>
                     </div>
                   </div>

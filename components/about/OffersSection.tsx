@@ -12,14 +12,15 @@ export function OffersSection() {
       title: "Offre Parents",
       icon: <Users className="w-12 h-12 text-primary" />,
       description: "Un service de transport adapté et sécurisé pour vos enfants",
-      link: "/services?tab=parents",
+      link: "/offres/parents",
       color: "from-primary/20 to-primary/40",
     },
     {
       title: "Offre Chauffeurs",
       icon: <Car className="w-12 h-12 text-secondary" />,
       description: "Rejoignez notre équipe de chauffeurs bienveillants",
-      link: "/services?tab=drivers",
+      // link: "/services?tab=drivers",
+      link: "/offres/chauffeurs",
       color: "from-secondary/20 to-secondary/40",
     }
   ];

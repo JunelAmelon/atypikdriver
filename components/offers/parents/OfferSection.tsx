@@ -19,7 +19,7 @@ export function OfferSection() {
     {
       icon: <Users className="w-8 h-8 text-primary" />,
       title: "Deux formules adaptées",
-      description: "Choisissez entre 10€/trajet occasionnel ou 180€/mois en illimité",
+      description: "Choisissez entre 149 € / mois pour des trajets moins fréquents ou 189 € / mois pour un service régulier.",
     },
   ];
 
@@ -58,40 +58,41 @@ export function OfferSection() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 mb-8">
-              {/* Forfait Occasionnel */}
-              <div className="bg-white p-6 rounded-xl shadow-lg flex-1 border-2 border-transparent hover:border-primary/20 transition-all duration-300">
-                <div className="bg-secondary/10 text-secondary text-xs font-medium py-1 px-3 rounded-full inline-block mb-2">
-                  Occasionnel
-                </div>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold text-primary">149€</span>
-                  <span className="text-text/70">/mois</span>
-                </div>
-                <p className="text-sm text-text/70">Idéal pour les besoins ponctuels</p>
-              </div>
-              
-              {/* Forfait Régulier */}
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl shadow-lg flex-1 border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 relative">
-                <div className="absolute -top-3 right-6 bg-primary text-white text-xs font-medium py-1 px-3 rounded-full">
-                  Recommandé
-                </div>
-                <div className="bg-primary/10 text-primary text-xs font-medium py-1 px-3 rounded-full inline-block mb-2">
-                  Régulier
-                </div>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl font-bold text-primary">189€</span>
-                  <span className="text-text/70">/mois</span>
-                </div>
-                <p className="text-sm text-text/70">Sans engagement - Annulation à tout moment</p>
-              </div>
+{/* Forfait Occasionnel */}
+<div className="bg-white p-6 rounded-xl shadow-lg flex-1 border-2 border-transparent hover:border-primary/20 transition-all duration-300">
+  <div className="bg-secondary/10 text-secondary text-xs font-medium py-1 px-3 rounded-full inline-block mb-2">
+    Occasionnel
+  </div>
+  <div className="flex items-baseline gap-2 mb-2">
+    <span className="text-4xl font-bold text-primary">149€</span>
+    <span className="text-text/70">/mois</span>
+  </div>
+  <p className="text-sm text-text/70">Pour les trajets ponctuels ou moins fréquents</p>
+</div>
+
+{/* Forfait Régulier */}
+<div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl shadow-lg flex-1 border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 relative">
+  <div className="absolute -top-3 right-6 bg-primary text-white text-xs font-medium py-1 px-3 rounded-full">
+    Recommandé
+  </div>
+  <div className="bg-primary/10 text-primary text-xs font-medium py-1 px-3 rounded-full inline-block mb-2">
+    Régulier
+  </div>
+  <div className="flex items-baseline gap-2 mb-2">
+    <span className="text-4xl font-bold text-primary">189€</span>
+    <span className="text-text/70">/mois</span>
+  </div>
+  <p className="text-sm text-text/70">Pour un accompagnement régulier et suivi hebdomadaire</p>
+</div>
+
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button href="#contact" variant="primary" className="group">
+              <Button href="/contact" variant="primary" className="group">
                 Je veux un trajet serein
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button href="tel:0123456789" variant="secondary">
+              <Button href="tel:+33 6 11 55 30 51" variant="secondary">
                 Parler à un conseiller
               </Button>
             </div>

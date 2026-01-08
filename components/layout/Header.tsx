@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, LogIn } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,7 +88,11 @@ export function Header() {
               ))}
               
               {/* Bouton de connexion */}
-              <Link href="#" className="bg-gradient-to-r from-primary to-secondary text-white font-medium py-2 px-6 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+              <Link 
+                href="https://app.atypik-driver.com" 
+                className="bg-gradient-to-r from-primary to-secondary text-white font-medium py-2 px-6 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              >
+                <LogIn className="w-5 h-5" />
                 <span>Connexion</span>
               </Link>
             </div>
@@ -155,10 +159,11 @@ export function Header() {
               {/* Bouton de connexion mobile */}
               <div className="px-6 py-3 mt-2">
                 <Link 
-                  href="#" 
-                  className="block bg-gradient-to-r from-primary to-secondary text-white font-medium py-3 px-6 rounded-lg text-center hover:shadow-md transition-all duration-300"
+                  href="https://app.atypik-driver.com" 
+                  className="block bg-gradient-to-r from-primary to-secondary text-white font-medium py-3 px-6 rounded-lg text-center hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
                   onClick={toggleMenu}
                 >
+                  <LogIn className="w-5 h-5" />
                   Connexion
                 </Link>
               </div>

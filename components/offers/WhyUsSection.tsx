@@ -93,7 +93,7 @@ export function WhyUsSection() {
             <p className="text-xl font-medium mb-6">
               Prêt à essayer ? Inscription en 3 minutes ⏱️
             </p>
-            <Button href="#contact" variant="primary">
+            <Button href="/contact" variant="primary">
               Je m'inscris maintenant
             </Button>
           </motion.div>

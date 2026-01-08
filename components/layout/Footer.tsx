@@ -33,7 +33,8 @@ export function Footer() {
               <li><FooterLink href="/">Accueil</FooterLink></li>
               <li><FooterLink href="/services">Services</FooterLink></li>
               <li><FooterLink href="/contact">Contact</FooterLink></li>
-              <li><FooterLink href="/mentions-legales">Mentions Légales</FooterLink></li>
+              <li><FooterLink href="/legal">Mentions Légales</FooterLink></li>
+              <li><FooterLink href="/privacy">Politique de confidentialité</FooterLink></li>
             </ul>
           </div>
           
@@ -46,7 +47,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-secondary" />
-                <span>contact@atypikdriver.fr</span>
+                <span>contact@atypik-driver.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-secondary mt-1" />
