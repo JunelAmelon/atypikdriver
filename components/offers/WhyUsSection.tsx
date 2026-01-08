@@ -28,7 +28,6 @@ export function WhyUsSection() {
     "Association Française des Aidants",
     "Fédération des Parents d'Élèves",
     "Zero investissement",
-    "Aximotravo",
   ];
 
   return (
